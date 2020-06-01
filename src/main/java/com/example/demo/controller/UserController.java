@@ -17,4 +17,9 @@ public class UserController {
     public User getUser(@PathVariable("id") int id) {
         return userService.getUser(id);
     }
+
+    @GetMapping("/update")
+    public User update(User user) {
+        return userService.update(user);
+    }
 }
