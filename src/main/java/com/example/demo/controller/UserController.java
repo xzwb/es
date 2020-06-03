@@ -22,4 +22,10 @@ public class UserController {
     public User update(User user) {
         return userService.update(user);
     }
+
+    @GetMapping("/del/{id}")
+    public String del(@PathVariable("id") int id) {
+        userService.delete(id);
+        return "success";
+    }
 }
